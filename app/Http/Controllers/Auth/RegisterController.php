@@ -27,7 +27,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -51,6 +51,9 @@ class RegisterController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
+            'captcha' =>'required|captcha',
+        ],['captcha.required'=>'验证码不能为空',
+           'captcha.captcha'=>'请输入正确的验证码',
         ]);
     }
 
@@ -67,5 +70,10 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+    }
+
+    public function showRegistrationForm()
+    {
+        return view('auth.register');
     }
 }
