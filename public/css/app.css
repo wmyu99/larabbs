@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@charset "UTF-8";
+@charset "UTF-8";
 
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
@@ -8350,10 +8350,10 @@ button.close {
   }
 }
 
-/*universal */
+/* universal */
 
 body {
-  font-family: Hiragino Sans GB,"Hiragino Sans GB", Helvetica,"Microsoft YaHei",Arial,sans-serif;
+  font-family: Hiragino Sans GB, "Hiragino Sans GB", Helvetica, "Microsoft YaHei", Arial,sans-serif;
 }
 
 /* header */
